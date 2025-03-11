@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orc Runner - Vegetable Mayhem</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Game Canvas -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Start Screen Overlay -->
+    <div id="startScreen" class="overlay">
+        <div class="overlay-content">
+            <h1>Orc Runner</h1>
+            <h2>Vegetable Mayhem</h2>
+            <button id="startButton">Start Game</button>
+            <div class="instructions">
+                <h3>How to Play:</h3>
+                <p>Help the Orc defeat vegetable enemies!</p>
+                <ul>
+                    <li>Defeat 10 enemies to level up</li>
+                    <li>Collect power-ups to become stronger</li>
+                    <li>Face powerful boss after each level</li>
+                    <li>Choose your upgrades wisely!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Level Up Overlay -->
+    <div id="levelUpScreen" class="overlay hidden">
+        <div class="overlay-content">
+            <h2>Level Up!</h2>
+            <div class="upgrade-options">
+                <button id="upgradeHP" class="upgrade-button">
+                    <i class="fas fa-heart"></i>
+                    Increase HP
+                </button>
+                <button id="upgradeAttack" class="upgrade-button">
+                    <i class="fas fa-sword"></i>
+                    Increase Attack
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game HUD -->
+    <div id="gameHUD" class="hidden">
+        <div class="hud-item">
+            <span class="label">Level:</span>
+            <span id="levelDisplay">1</span>
+        </div>
+        <div class="hud-item">
+            <span class="label">Score:</span>
+            <span id="scoreDisplay">0</span>
+        </div>
+        <div class="hud-item">
+            <span class="label">HP:</span>
+            <span id="hpDisplay">100</span>
+        </div>
+        <div class="hud-item">
+            <span class="label">Attack:</span>
+            <span id="attackDisplay">10</span>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameOverScreen" class="overlay hidden">
+        <div class="overlay-content">
+            <h2>Game Over</h2>
+            <p>Final Score: <span id="finalScore">0</span></p>
+            <button id="restartButton">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Game Scripts -->
+    <script src="js/collision.js"></script>
+    <script src="js/item.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/boss.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/levelUpMenu.js"></script>
+    <script src="js/gameManager.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
